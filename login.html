@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login -DinoTee</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script> <!-- Include external JS file -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DinoTee</h1>
+        </div>
+    </header>
+
+    <section class="login-section">
+        <div class="login-card" id="login-card">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+
+                <button type="submit">Login</button>
+                
+
+                <p>Don't have an account? <a href="javascript:void(0);" id="switch-to-register">Create one</a></p>
+            </form>
+        </div>
+
+        <div class="login-card" id="register-card" style="display: none;">
+            <h2>Create Account</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" name="username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+
+                <button type="submit">Create Account</button>
+
+                <p>Already have an account? <a href="javascript:void(0);" id="switch-to-login">Login</a></p>
+            </form>
+        </div>
+    </section>
+    <script>
+        const loggedInUser = "John Doe";
+        const usernameElement = document.getElementById('username-display');
+        if (usernameElement) {
+          usernameElement.textContent = loggedInUser
+          }
+  
+</script>
+    
+</body>
+</html>

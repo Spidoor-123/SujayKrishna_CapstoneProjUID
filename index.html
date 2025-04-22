@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DinoTee</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DinoTee</h1>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav id="nav-menu">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">🛒Cart (<span id="cart-count">0</span>)</a></li>
+                <div class="welcome-message">
+                    Welcome, <span id="username-display">Guest</span>!
+                  </div>
+                  
+                <li><a href="login.html"><img src="user.png" alt="Icon"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Performance Apparel for Athletes</h2>
+        <p>Gear up with our premium collection of t-shirts designed for comfort, performance, and style.</p>
+        <a href="#shop" class="cta-btn">Shop Now</a>
+    </section><br>
+       <br> 
+       <h2>&nbsp;&nbsp;&nbsp;Our Products:</h2>
+    <section id="shop" class="products">
+        
+        <!-- Product 1 -->
+        <div class="product-card" data-product-id="1" data-price="30">
+            <img src="Performance T-shirt.jpg" alt="Product 1" 
+                 onmouseover="changeImage(this, 'Performance T-shirt-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Performance T-shirt.jpg')">
+            <h3>Performance T-shirt</h3>
+            <p>$30.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(1, 'Performance T-shirt', 30)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-product-id="2" data-price="35">
+            <img src="Dry-Fit T-shirt.jpg" alt="Product 2" 
+                 onmouseover="changeImage(this, 'Dry-Fit T-shirt-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Dry-Fit T-shirt.jpg')">
+            <h3>Dry-Fit T-shirt</h3>
+            <p>$35.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(2, 'Dry-Fit T-shirt', 35)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-product-id="3" data-price="40">
+            <img src="Oversized T-shirt.jpg" alt="Product 3" 
+                 onmouseover="changeImage(this, 'Oversized T-shirt-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Oversized T-shirt.jpg')">
+            <h3>Oversized T-shirt</h3>
+            <p>$40.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(3, 'Oversized T-shirt', 40)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-product-id="4" data-price="30">
+            
+                <img src="p4,1.jpg" alt="Product 4" 
+                     onmouseover="changeImage(this, 'p4,2.jpg')" 
+                     onmouseout="resetImage(this, 'p4,1.jpg')">
+            <h3>Regular Fit Short-sleeved</h3>
+            <p>$30.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(4, 'Regular Fit Short-sleeved', 30)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 (New Product) -->
+        <div class="product-card" data-product-id="5" data-price="25">
+            <img src="Slim Fit T-shirt.jpg" alt="Product 5" 
+                 onmouseover="changeImage(this, 'Slim Fit T-shirt-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Slim Fit T-shirt.jpg')">
+            <h3>Slim Fit T-shirt</h3>
+            <p>$25.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(5, 'Slim Fit T-shirt', 25)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 (New Product) -->
+        <div class="product-card" data-product-id="6" data-price="50">
+            <img src="Athletic Hoodie.jpg" alt="Product 6" 
+                 onmouseover="changeImage(this, 'Athletic Hoodie-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Athletic Hoodie.jpg')">
+            <h3>Athletic Hoodie</h3>
+            <p>$50.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(6, 'Athletic Hoodie', 50)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 (New Product) -->
+        <div class="product-card" data-product-id="7" data-price="45">
+            <img src="Compression Shirt.jpg" alt="Product 7" 
+                 onmouseover="changeImage(this, 'Compression Shirt-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Compression Shirt.jpg')">
+            <h3>Compression Shirt</h3>
+            <p>$45.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(7, 'Compression Shirt', 45)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 (New Product) -->
+        <div class="product-card" data-product-id="8" data-price="60">
+            <img src="Windbreaker Jacket.jpg" alt="Product 8" 
+                 onmouseover="changeImage(this, 'Windbreaker Jacket-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Windbreaker Jacket.jpg')">
+            <h3>Windbreaker Jacket</h3>
+            <p>$60.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(8, 'Windbreaker Jacket', 60)">Add to Cart</button>
+        </div>
+
+    </section>
+
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="clearCart()">Clear Cart</button>
+    </section>
+
+<section>
+   <button onclick="window.location.href='Payment.html';" href class="buynow" type="button"> Buy Now</button>
+    <pre>
+
+
+
+
+
+
+        
+    </pre>
+    
+</section>
+
+
+    <div class="container">
+        <div class="content">
+            <div class="image-section"></div>
+            <div class="text-section">
+                <h1>WHY DINOTEE</h1>
+                <p>We believe in creating clothing that not only looks good but also feels amazing to wear. Based in Chennai, we are passionate about delivering high-quality, comfortable T-shirts that fit your style and lifestyle.</p>
+                <p class="features">PREMIUM QUALITY</p>
+                <p>Our t-shirts are crafted from the highest quality materials, ensuring they last wash after wash.</p>
+                <p class="features">COMFORT FIRST</p>
+                <p>Whether you're hitting the gym or relaxing at home, our T-shirts offer unmatched comfort.</p>
+                <p class="features">CUSTOMER CENTRIC</p>
+                <p> we pride ourselves on providing excellent customer service and a seamless shopping experience.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<br><br><br><br><br>
+
+<section id="about" class="about"> 
+        <h2 style="color: rgb(177, 59, 53);">About Us</h2><br><br><br>
+        
+        <p>We provide top-quality apparel designed specifically for athletes who demand excellence.,<br><br> Whether you're training, competing, or simply staying active, our gear is built to support your every move.<br><br> Crafted from advanced, high-performance fabrics, our products offer superior breathability,<br><br>moisture-wicking,and durability—keeping you cool, dry, and focused from start to finish.<br><br>
+            <pr>
+                <br>
+                <br>
+
+            </pr>
+
+            With a perfect blend of comfort, functionality, and style, our apparel empowers you to push your limits and go further than ever before. <br><br>Elevate your performance, embrace the grind, and unlock your full potential—because you deserve gear that works as hard as you do.
+            
+            Every stitch, every seam,<br><br>and every fiber is engineered with purpose—so you can train without distractions and perform without limits. From early morning workouts to late-night sessions,<br><br>we’ve got you covered with gear that moves with you, not against you.
+            
+            <br><br><br><b> Join a community of athletes who know that greatness doesn’t come easy—it’s earned through sweat, discipline, and the right gear.</b><br><br><br><b>It’s not just about what you wear,<br><br><br></b> It’s about how it makes you feel.<br><br><br><b>Confident. Powerful.Unstoppable.</b><br><br><br><b>
+            
+            This is more than apparel. </b><br><br><br><b>This is performance redefined.</b></p>
+    </section>
+    <pre>
+
+
+
+
+
+
+    </pre>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <br><br>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</html>
+    <br>
+
+    <h2 style="text-align: center;">For more details follow us on </h2>
+    
+
+<!-- Social Media Links -->
+<div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <img src="facebook.png" alt="Facebook" class="social-img"> <!-- Facebook icon -->
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <img src="instagram.png" alt="Instagram" class="social-img"> <!-- Instagram icon -->
+    </a>
+    <a href="https://twitter.com" target="_blank" class="social-icon">
+        <img src="twitter.png" alt="Twitter" class="social-img"> <!-- Twitter icon -->
+    </a>
+</div>
+    
+
+
+    <footer>
+        <p>&copy; 2025 DinoTee. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

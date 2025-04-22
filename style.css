@@ -1,0 +1,61 @@
+
+header { 
+   color: white;
+   padding: 12px 10px;
+   width : 100%;
+   text-align:right;
+   align-items: center;
+   justify-content:space-between;
+   background-color:transparent;
+   display:flex;
+   
+ }
+
+
+body {
+
+  color: wheat;
+  scroll-behavior: smooth;
+   background-image: url('pexels-felixmittermeier-956999.jpg');
+   background-size: cover;
+   background-repeat:no-repeat;
+   font-family: Arial, sans-serif;
+}
+
+nav a{
+
+   margin-top: px;
+   color:rgb(255, 255, 255) ;
+   margin:25px;
+   font-weight: bold;
+   font-size: medium;
+   text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color:lightyellow
+}
+
+.log{
+   color:rgb(244, 244, 248) ;
+   font-size:25px;
+   font-weight: 600;
+   text-decoration: none;
+   margin-left: 60px;
+}
+.navbar{
+   font-size: 19px;
+   color:lightyellow;
+   text-decoration:none;
+   font-weight:500;
+   margin-left:35px;
+}
+.homecontent{
+  color:wheat
+}
+.home{
+display: flex;
+align-items: center;
+height: 100vh;
+}

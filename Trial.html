@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DinoTee</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DinoTee</h1>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav id="nav-menu">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="login.html"><img src="bx-user-circle.svg" alt="Icon"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Performance Apparel for Athletes</h2>
+        <p>Gear up with our premium collection of t-shirts designed for comfort, performance, and style.</p>
+        <a href="#shop" class="cta-btn">Shop Now</a>
+    </section>
+
+    <section id="shop" class="products"><br>
+        <h2>  Our Products :</h2>
+        <div class="product-card" data-product-id="1" data-price="30"><br>
+            <img src="Performance T-shirt.jpg" alt="Product 1" 
+                 onmouseover="changeImage(this, 'Performance T-shirt-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Performance T-shirt.jpg')">
+            <h3>Performance T-shirt</h3>
+            <p>$30.00</p>
+            <a href="product-detail.html?productId=1">View Details</a>
+            <button onclick="addToCart(1, 'Performance T-shirt', 30)">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-product-id="2" data-price="35">
+            <img src="Dry-Fit T-shirt.jpg" alt="Product 2" 
+                 onmouseover="changeImage(this, 'Dry-Fit T-shirt-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Dry-Fit T-shirt.jpg')">
+            <h3>Dry-Fit T-shirt</h3>
+            <p>$35.00</p>
+            <button onclick="addToCart(2, 'Dry-Fit T-shirt', 35)">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-product-id="3" data-price="40">
+            <img src="Oversized T-shirt.jpg" alt="Product 3" 
+                 onmouseover="changeImage(this, 'Oversized T-shirt-hover.jpg')" 
+                 onmouseout="resetImage(this, 'Oversized T-shirt.jpg')">
+            <h3>Oversized T-shirt</h3>
+            <p>$40.00</p>
+            <button onclick="addToCart(3, 'Oversized T-shirt', 40)">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-product-id="4" data-price="30">
+            <div class="image-container">
+                <img src="p4,1.jpg" alt="Product 4" 
+                     onmouseover="changeImage(this, 'p4,2.jpg')" 
+                     onmouseout="resetImage(this, 'p4,1.jpg')">
+                <img src="p4,2.jpg" alt="Product 4" style="display: none;" 
+                     onmouseover="changeImage(this, 'p4,1.jpg')" 
+                     onmouseout="resetImage(this, 'p4,2.jpg')">
+            </div>
+            <h3>Regular Fit Short-sleeved</h3>
+            <p>$30.00</p>
+            <button onclick="addToCart(1, 'Regular Fit Short-sleeved', 30)">Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="clearCart()">Clear Cart</button>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We provide top-quality apparel designed specifically for athletes who want to perform at their best. Our products are made from high-performance fabrics that keep you comfortable throughout your workout or daily activity.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 DinoTee. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

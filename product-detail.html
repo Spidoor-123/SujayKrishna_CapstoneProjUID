@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="prd_detail.css">
+    
+</head>
+<body style="padding-top: 5px;">
+<pre>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+    <h1>Product Detail</h1>
+
+    <div>
+        <img src="Performance T-shirt.jpg" alt="Product" style="max-width: 300px; height: auto;">
+        <h3>Performance T-shirt (Blue) - Plain</h3>
+        <p>Price: $30.00</p>
+        <p>Description: High-quality performance t-shirt for athletes.</p>
+
+        <form id="size-form">
+            <label for="size">Choose Size:</label>
+            <select id="size" required>
+                <option value="">Select Size</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+            </select>
+            <br>
+            <h2>Your Cart</h2>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button type="submit">Add to Cart</button><br>
+            <button type="button" id="clear-cart-btn">Clear Cart</button>
+        </form>
+    </div>
+
+    <br>
+    <a href="index.html">Back to Shop</a>
+    <pre>           
+           
+
+    </pre>
+
+    <script>
+        let cartTotal = 0; // Initialize the cart total
+
+        // Function to update the cart total
+        function updateCartTotal() {
+            document.getElementById('cart-total').textContent = cartTotal.toFixed(2);
+        }
+
+        // Simple form submission handling for adding to cart
+        document.getElementById('size-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const size = document.getElementById('size').value;
+
+            if (size) {
+                cartTotal += 30.00; // Add the product price to the total
+                alert("Added to cart! Size: " + size);
+                updateCartTotal(); // Update the cart total on the page
+            } else {
+                alert("Please select a size.");
+            }
+        });
+
+        // Function to clear the cart
+        document.getElementById('clear-cart-btn').addEventListener('click', function() {
+            cartTotal = 0; // Reset the cart total
+            updateCartTotal(); // Update the displayed cart total
+            alert("Cart cleared!");
+        });
+    </script>
+
+</body>
+</html>
